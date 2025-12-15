@@ -38,26 +38,26 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit} className="space-y-6 mt-4">
       <div className="space-y-2">
         <label htmlFor="name" className="text-sm font-medium text-zinc-300">Name</label>
-        <input 
+        <input
           id="name"
           required
           className="w-full h-11 px-4 rounded-md bg-zinc-800 border border-zinc-700 text-white focus:outline-none focus:ring-2 focus:ring-white/20 transition-all placeholder:text-zinc-500"
           placeholder="Jane Doe"
           value={formData.name}
-          onChange={(e) => setFormData({...formData, name: e.target.value})}
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         />
       </div>
-      
+
       <div className="space-y-2">
         <label htmlFor="email" className="text-sm font-medium text-zinc-300">Email</label>
-        <input 
+        <input
           id="email"
           type="email"
           required
           className="w-full h-11 px-4 rounded-md bg-zinc-800 border border-zinc-700 text-white focus:outline-none focus:ring-2 focus:ring-white/20 transition-all placeholder:text-zinc-500"
           placeholder="jane@company.com"
           value={formData.email}
-          onChange={(e) => setFormData({...formData, email: e.target.value})}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
       </div>
 
@@ -68,12 +68,11 @@ const ContactForm = () => {
             <button
               type="button"
               key={type}
-              onClick={() => setFormData({...formData, projectType: type})}
-              className={`h-10 text-sm font-medium rounded-md border transition-all ${
-                formData.projectType === type 
-                ? 'bg-white text-black border-white' 
+              onClick={() => setFormData({ ...formData, projectType: type })}
+              className={`h-10 text-sm font-medium rounded-md border transition-all ${formData.projectType === type
+                ? 'bg-white text-black border-white'
                 : 'bg-zinc-800/50 text-zinc-400 border-zinc-700 hover:border-zinc-500'
-              }`}
+                }`}
             >
               {type}
             </button>
@@ -115,7 +114,7 @@ const App: React.FC = () => {
       <ScrollManager />
       <div className="min-h-screen bg-black text-white selection:bg-white/20">
         <Navbar onOpenDrawer={() => setIsDrawerOpen(true)} />
-        
+
         <main>
           <Routes>
             <Route path="/" element={<Home onOpenDrawer={() => setIsDrawerOpen(true)} />} />
@@ -126,8 +125,8 @@ const App: React.FC = () => {
 
         <Footer />
 
-        <Drawer 
-          isOpen={isDrawerOpen} 
+        <Drawer
+          isOpen={isDrawerOpen}
           onClose={() => setIsDrawerOpen(false)}
           title="Start your project"
           description="Tell us about your Shopify needs and we'll create a roadmap for success."

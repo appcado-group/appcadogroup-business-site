@@ -17,8 +17,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDrawer }) => {
     <nav className="fixed top-0 left-0 right-0 z-40 border-b border-white/5 bg-black/50 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 z-50">
-           <div className="h-6 w-6 bg-white rounded-sm rotate-45" />
-           <span className="font-display font-bold text-xl tracking-tight text-white">NOVA</span>
+          <div className="h-6 w-6 bg-white rounded-sm rotate-45" />
+          <span className="font-display font-bold text-xl tracking-tight text-white">Appcado Group</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -34,16 +34,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDrawer }) => {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button 
+          <Button
             onClick={onOpenDrawer}
-            variant="default" 
+            variant="default"
             className="hidden md:flex bg-white text-black hover:bg-zinc-200"
           >
             Start Project
           </Button>
-          <Button 
-            variant="ghost" 
-            size="icon" 
+          <Button
+            variant="ghost"
+            size="icon"
             className="md:hidden text-white"
             onClick={onOpenDrawer}
           >

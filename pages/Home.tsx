@@ -39,7 +39,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenDrawer }) => {
       {/* Hero Section */}
       <section ref={heroRef} className="relative px-6 py-24 md:py-32 lg:py-40 overflow-hidden min-h-[90vh] flex flex-col justify-center">
         {/* Background Elements - Parallax */}
-        <motion.div 
+        <motion.div
           style={{ y: backgroundY }}
           className="absolute inset-0 pointer-events-none"
         >
@@ -48,7 +48,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenDrawer }) => {
         </motion.div>
 
         <div className="max-w-7xl mx-auto relative z-10 w-full">
-          <motion.div 
+          <motion.div
             variants={container}
             initial="hidden"
             animate="show"
@@ -62,24 +62,24 @@ export const Home: React.FC<HomeProps> = ({ onOpenDrawer }) => {
               </span>
               Accepting new Shopify projects for Q4
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               variants={item}
               className="text-5xl md:text-7xl lg:text-8xl font-bold font-display tracking-tight text-white mb-8 leading-[0.9]"
             >
               Building the future <br />
               of <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500">digital commerce.</span>
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               variants={item}
               className="text-lg md:text-xl text-zinc-400 max-w-2xl mb-12 leading-relaxed"
             >
-              We are a specialized agency crafting bespoke Shopify solutions. 
-              From headless architecture to high-conversion themes, we engineer 
+              We are a specialized agency crafting bespoke Shopify solutions.
+              From headless architecture to high-conversion themes, we engineer
               e-commerce experiences that scale.
             </motion.p>
-            
+
             <motion.div variants={item} className="flex flex-wrap gap-4">
               <Button onClick={onOpenDrawer} size="lg" className="bg-white text-black hover:bg-zinc-200 text-base h-14 px-8 transition-transform hover:scale-105 active:scale-95">
                 Start your project <ArrowRight className="ml-2 h-4 w-4" />
@@ -93,7 +93,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenDrawer }) => {
       </section>
 
       {/* Services Section (Work) */}
-      <motion.section 
+      <motion.section
         id="work"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -113,37 +113,37 @@ export const Home: React.FC<HomeProps> = ({ onOpenDrawer }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ServiceCard 
+            <ServiceCard
               icon={<ShoppingBag className="h-6 w-6" />}
               title="Headless Commerce"
               description="Decoupled front-ends using Hydrogen or Next.js for ultimate performance and flexibility."
               delay={0.1}
             />
-            <ServiceCard 
+            <ServiceCard
               icon={<Code2 className="h-6 w-6" />}
               title="Custom App Development"
               description="Bespoke private and public apps to extend Shopify's native functionality."
               delay={0.2}
             />
-            <ServiceCard 
+            <ServiceCard
               icon={<Zap className="h-6 w-6" />}
               title="Performance Optimization"
               description="Core Web Vitals enhancement and code auditing for lightning-fast stores."
               delay={0.3}
             />
-             <ServiceCard 
+            <ServiceCard
               icon={<Smartphone className="h-6 w-6" />}
               title="Mobile-First Themes"
               description="Pixel-perfect Liquid theme development focusing on mobile conversion."
               delay={0.4}
             />
-             <ServiceCard 
+            <ServiceCard
               icon={<ShoppingBag className="h-6 w-6" />}
               title="Migration Services"
               description="Seamless data migration from Magento, WooCommerce, or BigCommerce to Shopify Plus."
               delay={0.5}
             />
-             <ServiceCard 
+            <ServiceCard
               icon={<Code2 className="h-6 w-6" />}
               title="API Integration"
               description="Connecting your ERP, CRM, and PIM systems for unified business operations."
@@ -157,56 +157,56 @@ export const Home: React.FC<HomeProps> = ({ onOpenDrawer }) => {
       <section id="process" className="px-6 py-24 border-b border-white/5 scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <motion.div
-             initial={{ opacity: 0, y: 20 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">How We Work</h2>
             <p className="text-zinc-400">A transparent, agile process designed for velocity and quality.</p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-             {[
-               {
-                 title: "Discovery",
-                 desc: "We dive deep into your business metrics and technical requirements to build a solid architectural foundation.",
-                 step: "01"
-               },
-               {
-                 title: "Development",
-                 desc: "Agile sprints with bi-weekly demos. You see progress in real-time as we build your custom solution.",
-                 step: "02"
-               },
-               {
-                 title: "Launch & Scale",
-                 desc: "Rigorous QA testing followed by a seamless deployment. We stick around to help you grow.",
-                 step: "03"
-               }
-             ].map((item, i) => (
-               <motion.div 
-                 key={i}
-                 initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ delay: i * 0.2 }}
-                 className="relative pt-8 pl-8 md:pl-0 md:pt-12"
-               >
-                 <div className="text-7xl md:text-8xl font-display font-bold text-zinc-900 absolute top-0 left-0 z-0 select-none opacity-50 md:opacity-100">
-                   {item.step}
-                 </div>
-                 <div className="relative z-10 md:ml-8">
-                   <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
-                   <p className="text-zinc-400 leading-relaxed text-sm">{item.desc}</p>
-                 </div>
-               </motion.div>
-             ))}
+            {[
+              {
+                title: "Discovery",
+                desc: "We dive deep into your business metrics and technical requirements to build a solid architectural foundation.",
+                step: "01"
+              },
+              {
+                title: "Development",
+                desc: "Agile sprints with bi-weekly demos. You see progress in real-time as we build your custom solution.",
+                step: "02"
+              },
+              {
+                title: "Launch & Scale",
+                desc: "Rigorous QA testing followed by a seamless deployment. We stick around to help you grow.",
+                step: "03"
+              }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.2 }}
+                className="relative pt-8 pl-8 md:pl-0 md:pt-12"
+              >
+                <div className="text-7xl md:text-8xl font-display font-bold text-zinc-900 absolute top-0 left-0 z-0 select-none opacity-50 md:opacity-100">
+                  {item.step}
+                </div>
+                <div className="relative z-10 md:ml-8">
+                  <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
+                  <p className="text-zinc-400 leading-relaxed text-sm">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Social Proof */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -214,19 +214,19 @@ export const Home: React.FC<HomeProps> = ({ onOpenDrawer }) => {
         className="px-6 py-24"
       >
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm font-medium text-zinc-500 mb-8 uppercase tracking-widest">Trusted by innovative brands</p>
+          <p className="text-sm font-medium text-zinc-500 mb-8 uppercase tracking-widest">Trusted by inappcadogrouptive brands</p>
           <div className="flex flex-wrap justify-center gap-12 md:gap-20 opacity-50 grayscale">
             {['Acme Co.', 'Lumina', 'FocalPoint', 'Vertex', 'Horizon'].map((brand, i) => (
-               <motion.span 
+              <motion.span
                 key={brand}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 * i, duration: 0.5 }}
                 className="text-2xl font-display font-bold text-white hover:text-zinc-300 transition-colors cursor-default"
-               >
-                 {brand}
-               </motion.span>
+              >
+                {brand}
+              </motion.span>
             ))}
           </div>
         </div>
@@ -236,7 +236,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenDrawer }) => {
 };
 
 const ServiceCard: React.FC<{ icon: React.ReactNode; title: string; description: string; delay?: number }> = ({ icon, title, description, delay = 0 }) => (
-  <motion.div 
+  <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}

@@ -9,14 +9,14 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <div className="h-5 w-5 bg-white rounded-sm rotate-45" />
-              <span className="font-display font-bold text-lg text-white">NOVA</span>
+              <span className="font-display font-bold text-lg text-white">appcadogroup</span>
             </div>
             <p className="text-zinc-400 max-w-sm leading-relaxed">
-              Crafting high-performance Shopify experiences for forward-thinking brands. 
+              Crafting high-performance Shopify experiences for forward-thinking brands.
               We blend technical excellence with aesthetic precision.
             </p>
           </div>
-          
+
           <div>
             <h3 className="font-display font-semibold text-white mb-4">Services</h3>
             <ul className="space-y-3">
@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between border-t border-white/5 pt-8 text-sm text-zinc-500">
-          <p>&copy; {new Date().getFullYear()} Nova Solutions Inc. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Appcado Group Inc. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Twitter</a>
             <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
