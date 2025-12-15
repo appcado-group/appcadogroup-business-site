@@ -118,8 +118,8 @@ const App: React.FC = () => {
         <main>
           <Routes>
             <Route path="/" element={<Home onOpenDrawer={() => setIsDrawerOpen(true)} />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
+            <Route path="/wardobe-and-outfit/privacy" element={<Privacy />} />
+            <Route path="/wardobe-and-outfit/terms" element={<Terms />} />
           </Routes>
         </main>
 
